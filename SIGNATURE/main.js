@@ -1,61 +1,92 @@
-// 구조 분해 할당
-//  각 데이터의 구조에 맞게 변수를 쉽게 만들 수 있어 편리
+// if 조건문
+// 1. 조건이 참일 경우에만 실행
+// if (조건){
 
-// // 배열
-// const arr = [1, 2, 3]
-// // const a = arr[0]
-// // const b = arr[1]
-// // const c = arr[2]
+// }
 
-// // console.log(a, b, c)
+// // 2. 조건이 거짓일 때도 실행하고 싶을 때 사용
+// if (조건){
 
-// // 구조 분해 할당 문법
-// // 배열을 분해해서 재할당하는 것임
-// const [a, b, c] = arr
-// console.log(a, b, c)
+// } else{
 
-// let a = 0
-// let b = 0
-// let c = 0
-// const arr = [1, 2, 3];
-// [a, b, c] = arr
-// console.log(a, b, c)
+// }
 
-// let b = 0
-// let c = 0
-// const arr = [1, 2, 3];
-// // 1이 들어갈 자리 비워줘야함
-// // 그래야 2와 3이 b, c할당된다
-// [, b, c] = arr
-// console.log(b, c)
+// // 3. 조건이 여러개 제공할 때
+// if (조건1) {
 
-// // 배열 구조 할당에서는 구조를 맞춰서 순서대로 할당
-// // 사용하지 않는 변수는 ,로 비워놓자
-// // 배열데이터는 item 순서가 매우 중요함 !!
+// } else if (조건2) {
 
-// const arr = [1,2,3]
-// const [a, rest] = arr
-// console.log(a,rest)
+// } else if (조건3) {
 
-// // a 부분만 할당하고 나머지는 rest로 들어가게 해보자
+// } else {
 
-// const arr = [1,2,3]
-// const [a, ...rest] = arr
-// console.log(a,rest)
+// }
 
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3
+// // if 조건문 예제
+// function isPositive(number) {
+//     if (number > 0) {
+//         return '양수'
+//     } else if(number < 0){
+//         return '음수'
+//     } else {
+//         return '0'
+//     }
+// }
+
+// console.log(isPositive(1))
+// console.log(isPositive(10))
+// console.log(isPositive(-21))
+// console.log(isPositive(0))
+
+// // switch 조건문
+// switch (조건) {
+//     case 값1:
+//         // 조건이 값1일 때 실행
+//         break
+//     case 값2:
+//         // 조건이 값2일 때 실행
+//         break
+//     default:
+//         // 조건이 값1도 값2도 아닐 때 실행
+// }
+
+// // 예제
+// function price(fruit) {
+//     // switch (fruit) {
+//     //     case 'Apple':
+//     //         return 1000
+//     //     case 'Banana':
+//     //         return 1500
+//     //     case 'Cherry':
+//     //         return 2000
+//     //     default:
+//     //         return 0
+//     // }
+//     if (fruit === 'Apple'){
+//         return 1000
+//     } else if ( fruit === 'Banana'){
+//         return 1500
+//     } else if ( fruit === 'Cherry'){
+//         return 2000
+//     } else {
+//         return 0
+//     }
+// }
+
+// console.log(price('Apple'))
+// console.log(price('Banana'))
+// console.log(price('Cherry'))
+// console.log(price('Mango'))
+
+// // for 반복문
+// for ( 초기화; 조건; 증감){
+//     // 반복 실행할 코드
+// }
+
+// 예제
+for (let i = 9; i > -1; i -= 1) {
+    if (i%2 === 0){
+        continue
+    }
+    console.log(i)
 }
-
-// const a = obj.a
-// const b = obj.b
-// const c = obj.c
-
-// const {} = obj
-// const [] = arr 
-console.log(obj.a ,obj.b)
-const { a, b } = obj
-
-console.log(a, b)

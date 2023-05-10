@@ -15,7 +15,7 @@ console.log(number3)
 console.log(typeof(number3))
 
 const number4 = -123
-console.log(number4 + undefined)
+console.log(number4 + undefined)    
 // 숫자 연산에 숫자가 아닌 다른 값이 포함되어 있을 때
 // Not a number
 console.log(typeof(number4 + undefined))
